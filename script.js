@@ -1,6 +1,7 @@
 const noBtn = document.getElementById("noBtn");
 const yesBtn = document.getElementById("yesBtn");
 const message = document.getElementById("message");
+const image = document.getElementById("mainImage");
 
 const RSVP_LINK = "https://your-rsvp-link-here.com";
 
