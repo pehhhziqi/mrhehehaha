@@ -30,6 +30,7 @@ noBtn.addEventListener("click", () => {
 
 
 yesBtn.addEventListener("click", () => {
+  image.src = "happy.png";
   message.innerText = "YAY 💖 Redirecting you to the invite…";
   setTimeout(() => {
     window.location.href = RSVP_LINK;
