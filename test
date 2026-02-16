@@ -1,0 +1,47 @@
+style.css
+body {
+  font-family: Arial, sans-serif;
+  background: #fff5f7;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.container {
+  text-align: center;
+}
+
+h1 span {
+  color: #ff5a8a;
+}
+
+.avatar {
+  width: 220px;
+  margin: 20px 0;
+}
+
+button {
+  padding: 12px 30px;
+  border-radius: 25px;
+  border: none;
+  font-size: 16px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+#yesBtn {
+  background: #ff5a8a;
+  color: white;
+  margin-left: 10px;
+}
+
+#noBtn {
+  background: #ddd;
+}
+
+#message {
+  margin-top: 20px;
+  font-size: 18px;
+  color: #ff5a8a;
+}
