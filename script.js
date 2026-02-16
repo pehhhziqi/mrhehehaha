@@ -20,9 +20,14 @@ const texts = [
 noBtn.addEventListener("click", () => {
   clicks++;
   scale *= 0.8;
+
   noBtn.style.transform = `scale(${scale})`;
   noBtn.innerText = texts[clicks] || "…";
+
+  // change image when No is clicked
+  image.src = "sad.png";
 });
+
 
 yesBtn.addEventListener("click", () => {
   message.innerText = "YAY 💖 Redirecting you to the invite…";
