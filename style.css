@@ -1,3 +1,4 @@
+/* Base body styling */
 body {
   font-family: Arial, sans-serif;
   background: #fff5f7;
@@ -5,26 +6,43 @@ body {
   justify-content: center;
   align-items: center;
   height: 100vh;
+  margin: 0;
+  padding: 0;
+  text-align: center;
 }
 
+/* Container */
 .container {
   text-align: center;
+  padding: 20px;
+  max-width: 900px;
+  width: 90%;
+}
+
+/* Heading */
+h1 {
+  font-size: 2.5rem;
+  line-height: 1.3;
 }
 
 h1 span {
   color: #ff5a8a;
 }
 
+/* Avatar image */
 .avatar {
   width: 220px;
+  max-width: 80%;
   margin: 20px 0;
+  height: auto;
 }
 
+/* Buttons */
 button {
-  padding: 12px 30px;
+  padding: 14px 35px;
   border-radius: 25px;
   border: none;
-  font-size: 16px;
+  font-size: 18px;
   cursor: pointer;
   transition: all 0.3s ease;
 }
@@ -39,8 +57,41 @@ button {
   background: #ddd;
 }
 
+/* Message text */
 #message {
   margin-top: 20px;
   font-size: 18px;
   color: #ff5a8a;
+}
+
+/* BIG YES EFFECT */
+#yesBtn.big {
+  position: fixed;                  /* float above everything */
+  top: 50%;                         /* center vertically */
+  left: 50%;                        /* center horizontally */
+  transform: translate(-50%, -50%) scale(3); /* center & enlarge */
+  font-size: 3rem;
+  z-index: 1000;
+  transition: transform 0.5s ease, font-size 0.5s ease;
+}
+
+/* RESPONSIVE DESIGN FOR SMALL SCREENS */
+@media (max-width: 600px) {
+  h1 {
+    font-size: 2rem;
+  }
+
+  .avatar {
+    width: 180px;
+  }
+
+  button {
+    font-size: 16px;
+    padding: 10px 25px;
+  }
+
+  #yesBtn.big {
+    font-size: 2.5rem;
+    scale: 2.5; /* slightly smaller on mobile */
+  }
 }
