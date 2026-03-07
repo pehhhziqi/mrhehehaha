@@ -81,8 +81,8 @@ button {
   position: fixed;                  
   top: 50%;                         
   left: 50%;                        
-  transform: translate(-50%, -50%) scale(3); 
-  font-size: 3rem;
+  transform: translate(-50%, -50%) scale(3); /* desktop default */
+  font-size: 3rem;                   /* desktop font size */
   z-index: 1000;
   transition: transform 0.5s ease, font-size 0.5s ease;
 }
@@ -102,8 +102,9 @@ button {
     padding: 10px 25px;
   }
 
+  /* Big Yes button smaller on mobile */
   #yesBtn.big {
-    font-size: 2.5rem;
-    scale: 2.5;
+    transform: translate(-50%, -50%) scale(2); 
+    font-size: 2rem;                           
   }
 }
