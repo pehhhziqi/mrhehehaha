@@ -11,10 +11,10 @@ let clicks = 0;
 const texts = [
   "No",
   "Are you sure?",
-  "Really?",
-  "Think again 🥺",
-  "Pls 😭",
-  "You sure anot 💍"
+  "Don't lie you are free",
+  "Yes you are free",
+  "Just press the yes",
+  "Just press yes you can reject later"
 ];
 
 noBtn.addEventListener("click", () => {
