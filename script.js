@@ -5,9 +5,6 @@ const image = document.getElementById("mainImage");
 
 const RSVP_LINK = "https://pehziqi.my.canva.site/amosandziqi";
 
-let scale = 1;
-let clicks = 0;
-
 const texts = [
   "No",
   "Are you sure?",
@@ -17,18 +14,28 @@ const texts = [
   "Just press yes you can reject later"
 ];
 
+let clicks = 0;
+
 noBtn.addEventListener("click", () => {
   clicks++;
-  scale *= 0.8;
 
-  noBtn.style.transform = `scale(${scale})`;
+  // Change the No button text
   noBtn.innerText = texts[clicks] || "…";
 
-  // change image when No is clicked
+  // Change image to sad
   image.src = "sad.png";
+
+  // Hide the No button
+  noBtn.style.display = "none";
+
+  // Add "big" class to Yes button to make it explode
+  yesBtn.classList.add("big");
+
+  // Optional: update message
+  message.innerText = "Hmm… really? Maybe this will help 💖";
 });
 
-
+// Yes button click logic (unchanged)
 yesBtn.addEventListener("click", () => {
   image.src = "ChatGPT Image Mar 7, 2026, 06_58_49 PM.png";
   message.innerText = "YAY! Redirecting you to the invite…";
