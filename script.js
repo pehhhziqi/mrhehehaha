@@ -30,7 +30,7 @@ noBtn.addEventListener("click", () => {
 
 
 yesBtn.addEventListener("click", () => {
-  image.src = "happy.png";
+  image.src = "ChatGPT Image Mar 7, 2026, 06_58_49 PM.png";
   message.innerText = "YAY 💖 Redirecting you to the invite…";
   setTimeout(() => {
     window.location.href = RSVP_LINK;
