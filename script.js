@@ -17,34 +17,36 @@ const texts = [
 
 let clicks = 0;
 const REQUIRED_NO_CLICKS = texts.length; // 3 clicks
+let scale = 1; // No button scale factor
 
 // No button click logic
 noBtn.addEventListener("click", () => {
-  // Update No button text if within array
+  // Change No button text
   noBtn.innerText = texts[clicks] || "…";
 
   // Change image to sad
   image.src = "sad.png";
 
-  // Show playful message
-  message.innerText = "Hmm… really? Keep pressing No! 💖";
+  // Diminish No button gradually
+  scale *= 0.8;
+  noBtn.style.transform = `scale(${scale})`;
 
   // Increment click count
   clicks++;
 
-  // Trigger Yes explosion after 3 clicks
+  // Trigger Yes explosion after required No clicks
   if (clicks >= REQUIRED_NO_CLICKS) {
     // Show overlay
     overlay.style.display = "block";
 
-    // Hide No button
+    // Hide No button completely
     noBtn.style.display = "none";
 
     // Enlarge Yes button
     yesBtn.classList.add("big");
 
-    // Update message
-    message.innerText = "Looks like it's time to say YES! 💖";
+    // Optional message
+    message.innerText = "just click yes. if really cannot you can reject us later...";
   }
 });
 
