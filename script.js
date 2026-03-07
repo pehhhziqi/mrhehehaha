@@ -3,7 +3,7 @@ const yesBtn = document.getElementById("yesBtn");
 const message = document.getElementById("message");
 const image = document.getElementById("mainImage");
 
-const RSVP_LINK = "https://your-rsvp-link-here.com";
+const RSVP_LINK = "https://pehziqi.my.canva.site/amosandziqi";
 
 let scale = 1;
 let clicks = 0;
